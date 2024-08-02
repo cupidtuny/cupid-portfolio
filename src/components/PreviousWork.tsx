@@ -27,6 +27,13 @@ const projects = [
     imageUrl: "/projects/Screenshot_2.png",
     caseStudyUrl: "#",
   },
+  {
+    title: "CerasHealth",
+    description:
+      "Navigate your patient care journey with our five seamless AI-powered platform components utilizing predictive analytics and outcome benchmarks..",
+    imageUrl: "/projects/ceras.png",
+    caseStudyUrl: "#",
+  },
 ];
 
 const PreviousWork: React.FC = () => {
