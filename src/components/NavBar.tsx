@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
           <Link
-            href="https://github.com/AndreColding"
+            href="https://github.com/cupidTuny"
             target="_blank"
             className="hidden md:flex"
           >
