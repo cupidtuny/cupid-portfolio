@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
           />
         </div>
         <div className="flex items-center mt-20 mr-4">
-          <Link href="https://github.com/AndreColding" target="_blank">
+          <Link href="https://github.com/cupidtuny" target="_blank">
             <img src="/github-mark-white.svg" alt="" className="GitHub" />
           </Link>
           <Link href="liuyuan040620@gmail.com" target="_blank" className="ml-4">
