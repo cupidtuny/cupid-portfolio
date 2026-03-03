@@ -1,7 +1,9 @@
 import Hero from '@/components/Hero'
 import About from '@/components/About'
-import VerticalTimeline  from '@/components/Timeline'
+import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 import PreviousWork from '@/components/PreviousWork'
+import LifeCulture from '@/components/LifeCulture'
 import ContactCard from '@/components/ContactCard'
 import HireMeCard from '@/components/HireMe'
 import Footer from '@/components/Footer'
@@ -13,8 +15,10 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <About/>
-      {/* <VerticalTimeline/> */}
+      <Experience/>
+      <Education/>
       <PreviousWork/>
+      <LifeCulture/>
       <ContactCard/>
       <HireMeCard/>
       <Footer/>

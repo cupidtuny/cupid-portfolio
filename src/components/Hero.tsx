@@ -46,25 +46,24 @@ const Hero: React.FC = () => {
       </svg>
       <div className="text-center text-white px-6 md:px-12">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <span className="animated-gradient">I am Liu Yuan </span>👋
+          <span className="animated-gradient">Kevin Chen</span>👋
         </h1>
         <p className="text-xl md:text-2xl mb-8">
-          Full-stack developer specializing in Node.js, React.js, Next.js,{" "}
+          Senior Full-Stack Developer & Technology Consultant
           <br />
-          AWS, and AI integration, delivering scalable and intelligent
-          solutions.
+          Specializing in scalable web applications, cloud architecture, and AI-powered solutions
         </p>
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 flex-wrap gap-2">
           <ButtonLink
-            className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-100"
-            buttonText="Previous Work"
+            className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all shadow-lg"
+            buttonText="View My Work"
             elementId="previouswork"
           />
-          {/* <button className="bg-transparent border-2 border-white text-white font-semibold px-6 py-2 rounded-md hover:bg-white hover:text-blue-600">
-            <Link href='https://resume.io/r/kpSyznSzv' target='_blank'>
-              Resume
-            </Link>
-          </button> */}
+          <ButtonLink
+            className="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-all"
+            buttonText="Contact Me"
+            elementId="contact"
+          />
         </div>
       </div>
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">

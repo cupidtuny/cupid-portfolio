@@ -1,7 +1,9 @@
 {
-  "name": "noah",
-  "version": "0.1.0",
+  "name": "kevin-chen-portfolio",
+  "version": "2.0.0",
   "private": true,
+  "description": "Modern professional portfolio for Kevin Chen - Senior Full-Stack Developer",
+  "author": "Kevin Chen",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

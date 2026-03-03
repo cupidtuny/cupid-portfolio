@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -17,10 +18,16 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient( to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
     background-image: url("https://nextui.org/gradient-right-dark.svg");
     background-position: 1200px;
     background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
 }
 
 .GitHub,
@@ -28,28 +35,29 @@ body {
     height: 30px;
 }
 
-
-/* Add this to your global CSS file */
-
+/* Enhanced Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    /* background: #161616; */
     background-color: transparent;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #1d1c1c;
-    /* border-radius: 10px; */
+    background: linear-gradient(180deg, #8b5cf6, #6366f1);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(44, 44, 44);
+    background: linear-gradient(180deg, #a78bfa, #818cf8);
+    background-clip: padding-box;
 }
 
+/* Section Backgrounds */
 .section2 {
     background-image: url("https://nextui.org/gradient-left-dark.svg");
     background-position: -400px;
@@ -65,11 +73,13 @@ body {
 
 .mnhdr {
     border-bottom: #1d1c1c 1px solid;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .blur-background {
-    backdrop-filter: blur(10px);
-    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .blur-background2 {
@@ -77,8 +87,11 @@ body {
     background-position: 20px;
     background-position-y: -500px;
     background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Scroll Indicator Animation */
 @keyframes scroll {
     0% {
         transform: translateY(0);
@@ -95,6 +108,7 @@ body {
     animation: scroll 2s ease infinite;
 }
 
+/* Custom Gradient */
 .custom-gradient::after {
     position: absolute;
     bottom: 0;
@@ -105,6 +119,7 @@ body {
     clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
 
+/* Timeline Backgrounds */
 .timeline-bg1 {
     background-image: url("https://nextui.org/dark-mode-gradient.svg");
     background-position: 20px;
@@ -119,11 +134,18 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Previous Work Background */
 .pw-bg {
     background-image: url("https://nextui.org/gradient-left-dark.svg");
     background-position: -600px;
+    transition: all 0.3s ease;
 }
 
+.pw-bg:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Card Background */
 .cc-bg {
     background-image: url("https://nextui.org/gradient-right-dark.svg");
     background-position: -400px;
@@ -131,12 +153,14 @@ body {
     background-size: cover;
 }
 
+/* Footer Background */
 .footer-b {
     border-top: #1d1c1c 2px solid;
     background-image: url("https://nextui.org/stitches-gradient.svg");
     background-position: -320px;
 }
 
+/* Animated Gradient Text */
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -153,48 +177,183 @@ body {
     background: linear-gradient(270deg, #d83cff, #00a3ff, #8b5ef3);
     background-size: 200% 200%;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     display: inline;
     animation: gradient 5s ease infinite;
 }
 
+/* Profile Image Container */
+.profile-image-container {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4);
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+/* Button Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Glow Effect */
+.glow-effect {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.glow-effect:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Otherbox Animation */
 .otherbox {
-  justify-content: center;
-  align-items: center;
-  width: 750px;
-  height: 450px;
-  padding: 25px 10px;
-  margin-left: 16px;
-  transform: translateZ(0);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 450px;
+    padding: 25px 10px;
+    margin-left: 16px;
+    transform: translateZ(0);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0px 2px 8px -1px #0000001a;
 }
 
 .otherbox::before,
 .otherbox::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
+    content: "";
+    position: absolute;
+    z-index: -1;
 }
 
 /* Conic Gradient Animation */
 .otherbox::before {
-  animation: 6s rotate linear infinite;
-  width: 200%;
-  height: 200%;
-  background: var(--tile-border);
+    animation: 6s rotate linear infinite;
+    width: 200%;
+    height: 200%;
+    background: var(--tile-border);
 }
 
 /* Inner Square */
 .otherbox::after {
-  inset: 0;
-  padding: 1px;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
-  background-clip: content-box;
+    inset: 0;
+    padding: 1px;
+    border-radius: var(--border-radius);
+    background: linear-gradient(
+        to bottom right,
+        rgba(var(--tile-start-rgb), 1),
+        rgba(var(--tile-end-rgb), 1)
+    );
+    background-clip: content-box;
 }
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .animated-gradient {
+        font-size: 2rem;
+    }
+    
+    .profile-image-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Glass Morphism Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Border */
+.gradient-border {
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #8b5cf6, #6366f1, #ec4899);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #0f172a 4%, #1e293b 25%, #0f172a 36%);
+    background-size: 1000px 100%;
+}
+

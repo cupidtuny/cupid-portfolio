@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ButtonLink } from "./Scroller";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaTelegram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 const Navbar: React.FC = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
           href="/"
           className="text-2xl font-semibold text-gray-800 text-white"
         >
-          Liu Yuan
+          Kevin Chen
         </Link>
         <div className="hidden md:flex space-x-6">
           <ButtonLink
@@ -47,7 +47,17 @@ const Navbar: React.FC = () => {
           />
           <ButtonLink
             className="text-lg font-medium text-gray-800 text-white hover:text-gray-300"
-            buttonText="Previous Work"
+            buttonText="About"
+            elementId="about"
+          />
+          <ButtonLink
+            className="text-lg font-medium text-gray-800 text-white hover:text-gray-300"
+            buttonText="Experience"
+            elementId="experience"
+          />
+          <ButtonLink
+            className="text-lg font-medium text-gray-800 text-white hover:text-gray-300"
+            buttonText="Projects"
             elementId="previouswork"
           />
           <ButtonLink
@@ -71,18 +81,36 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
           <Link
-            href="https://github.com/cupidTuny"
+            href="https://github.com/kevinchen"
             target="_blank"
             className="hidden md:flex"
+            aria-label="GitHub"
           >
             <img src="/github-mark-white.svg" alt="" className="GitHub" />
           </Link>
           <Link
-            href="liuyuan040620@gmail.com"
+            href="https://t.me/kevinchen"
             target="_blank"
-            className="hidden md:flex"
+            className="hidden md:flex items-center hover:text-purple-400 transition-colors"
+            aria-label="Telegram"
           >
-            <SiGmail size={36} />
+            <FaTelegram size={30} />
+          </Link>
+          <Link
+            href="https://discord.com/users/kevinchen"
+            target="_blank"
+            className="hidden md:flex items-center hover:text-purple-400 transition-colors"
+            aria-label="Discord"
+          >
+            <FaDiscord size={30} />
+          </Link>
+          <Link
+            href="mailto:kevinchen.dev1993@gmail.com"
+            target="_blank"
+            className="hidden md:flex items-center hover:text-purple-400 transition-colors"
+            aria-label="Email"
+          >
+            <SiGmail size={30} />
           </Link>
         </div>
       </nav>
@@ -99,7 +127,17 @@ const Navbar: React.FC = () => {
           />
           <ButtonLink
             className="text-left text-lg font-medium text-gray-800 text-white hover:text-gray-200 hover:text-gray-400"
-            buttonText="Previous Work"
+            buttonText="About"
+            elementId="about"
+          />
+          <ButtonLink
+            className="text-left text-lg font-medium text-gray-800 text-white hover:text-gray-200 hover:text-gray-400"
+            buttonText="Experience"
+            elementId="experience"
+          />
+          <ButtonLink
+            className="text-left text-lg font-medium text-gray-800 text-white hover:text-gray-200 hover:text-gray-400"
+            buttonText="Projects"
             elementId="previouswork"
           />
           <ButtonLink
@@ -108,12 +146,18 @@ const Navbar: React.FC = () => {
             elementId="contact"
           />
         </div>
-        <div className="flex items-center mt-20 mr-4">
-          <Link href="https://github.com/cupidtuny" target="_blank">
+        <div className="flex items-center mt-20 mr-4 space-x-4">
+          <Link href="https://github.com/kevinchen" target="_blank" aria-label="GitHub">
             <img src="/github-mark-white.svg" alt="" className="GitHub" />
           </Link>
-          <Link href="liuyuan040620@gmail.com" target="_blank" className="ml-4">
-            <FaDiscord size={36} />
+          <Link href="https://t.me/kevinchen" target="_blank" aria-label="Telegram">
+            <FaTelegram size={30} />
+          </Link>
+          <Link href="https://discord.com/users/kevinchen" target="_blank" aria-label="Discord">
+            <FaDiscord size={30} />
+          </Link>
+          <Link href="mailto:kevinchen.dev1993@gmail.com" target="_blank" aria-label="Email">
+            <SiGmail size={30} />
           </Link>
         </div>
       </div>

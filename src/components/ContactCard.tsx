@@ -1,41 +1,57 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDiscord, FaTelegram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+
 const ContactCard: React.FC = () => {
   return (
-    <div id="contact">
-      <h2 className="text-2xl font-bold mb-2 text-center">
-        Check out my socials below! ✨
+    <div id="contact" className="py-12">
+      <h2 className="text-3xl font-bold mb-8 text-center">
+        Let&apos;s Connect! <span className="animated-gradient">✨</span>
       </h2>
-      <div className="bg-transparent border p-8 rounded-lg shadow-lg text-white w-full md:max-w-4xl mx-auto mt-8 cc-bg blur-background w-4/5">
-        <div className="flex justify-between items-center">
+      <div className="bg-transparent border border-purple-500/30 p-8 rounded-lg shadow-lg text-white w-full md:max-w-4xl mx-auto mt-8 cc-bg blur-background w-4/5">
+        <div className="flex justify-between items-center flex-wrap gap-6">
           <div>
-            <h2 className="text-2xl font-bold mb-2">Liu Yuan</h2>
-            <p className="text-sm mb-4">Full-stack Software Engineer</p>
-            {/* <button className="bg-inherit border text-purple-200 px-4 py-2 rounded shadow hover:bg-gray-100 hover:text-black transition-colors duration-200">
-                        <Link href='https://resume.io/r/kpSyznSzv' target='_blank'>
-                            Resume
-                        </Link>
-                    </button> */}
+            <h2 className="text-3xl font-bold mb-2">Kevin Chen</h2>
+            <p className="text-lg mb-4 text-gray-200">Senior Full-Stack Developer</p>
+            <p className="text-gray-300">
+              Passionate about building exceptional web experiences
+            </p>
           </div>
 
           <div className="flex space-x-4">
             <a
-              href="https://github.com/cupidtuny"
+              href="https://github.com/kevinchendev1993"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-gray-200"
+              className="hover:text-gray-200 transition-transform hover:scale-110"
+              aria-label="GitHub Profile"
             >
               <FaGithub size={44} />
             </a>
-            {/* <a href="https://www.linkedin.com/in/noah-gomes" target="_blank" rel="noreferrer" className="hover:text-gray-200">
-                        <FaLinkedin size={44} />
-                    </a> */}
             <a
-              href="liuyuan040620@gmail.com"
+              href="https://t.me/cupid040620"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-gray-200"
+              className="hover:text-purple-400 transition-transform hover:scale-110"
+              aria-label="Telegram"
+            >
+              <FaTelegram size={44} />
+            </a>
+            <a
+              href="https://discord.com/users/kevinchen.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-purple-400 transition-transform hover:scale-110"
+              aria-label="Discord"
+            >
+              <FaDiscord size={44} />
+            </a>
+            <a
+              href="mailto:kevinchen.dev1993@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-gray-200 transition-transform hover:scale-110"
+              aria-label="Email"
             >
               <SiGmail size={44} />
             </a>
