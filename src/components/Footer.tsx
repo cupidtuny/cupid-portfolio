@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="hover:text-purple-400 transition-colors"
                 >
-                  Telegram: @kevinchen
+                  Telegram: @cupid040620
                 </a>
               </li>
               <li>
@@ -105,10 +105,10 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="hover:text-purple-400 transition-colors"
                 >
-                  Discord: kevinchen
+                  Discord: kevinchen.dev
                 </a>
               </li>
-              <li>San Francisco Bay Area, CA</li>
+              <li>21 Orchard Boulevard, Singapore</li>
               <li>
                 <span className="inline-flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
