@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
                   Discord: kevinchen.dev
                 </a>
               </li>
-              <li>21 Orchard Boulevard, Singapore</li>
+              <li>Shang Hai, China</li>
               <li>
                 <span className="inline-flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
