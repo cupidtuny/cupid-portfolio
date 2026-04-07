@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaHeart, FaDiscord, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaHeart, FaDiscord, FaTelegram, FaReddit } from "react-icons/fa";
 import { ButtonLink } from "./Scroller";
 import { SiGmail } from "react-icons/si";
 
@@ -40,6 +40,15 @@ const Footer: React.FC = () => {
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
+              </Link>
+              <Link
+                href="https://www.reddit.com/user/Tiny_Calendar_2518/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-purple-400 transition-colors"
+                aria-label="Reddit"
+              >
+                <FaReddit size={28} />
               </Link>
             </div>
           </div>
