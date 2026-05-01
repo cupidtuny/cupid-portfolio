@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { FaCode, FaServer, FaCloud, FaBrain, FaCheck } from "react-icons/fa";
 
 const About: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           {/* Profile Image */}
           <div className="flex justify-center">
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-4 border-purple-500 shadow-2xl profile-image-container">
+            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border border-white/20 shadow-2xl profile-image-container">
               <Image
                 src="/profile/kevin-chen.jpg"
                 alt="Kevin Chen"
@@ -53,72 +54,72 @@ const About: React.FC = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-purple-300 flex items-center">
-                <span className="mr-2">💻</span> Frontend Development
+              <h4 className="text-xl font-semibold text-gray-300 flex items-center">
+                <FaCode className="mr-2" /> Frontend Development
               </h4>
               <ul className="space-y-2 text-gray-200">
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>React.js, Next.js, Vue.js, TypeScript</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Tailwind CSS, Material-UI, Styled Components</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Redux, Context API, State Management</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Responsive Design, Accessibility (WCAG)</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-purple-300 flex items-center">
-                <span className="mr-2">⚙️</span> Backend Development
+              <h4 className="text-xl font-semibold text-gray-300 flex items-center">
+                <FaServer className="mr-2" /> Backend Development
               </h4>
               <ul className="space-y-2 text-gray-200">
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Node.js, Express.js, NestJS</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Python, Django, Flask, FastAPI</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>RESTful APIs, GraphQL, WebSockets</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>PostgreSQL, MongoDB, Redis</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-purple-300 flex items-center">
-                <span className="mr-2">☁️</span> Cloud & DevOps
+              <h4 className="text-xl font-semibold text-gray-300 flex items-center">
+                <FaCloud className="mr-2" /> Cloud & DevOps
               </h4>
               <ul className="space-y-2 text-gray-200">
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>AWS (EC2, S3, Lambda, RDS)</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Docker, Kubernetes, CI/CD</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>GitHub Actions, Jenkins</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">✔</span>
+                  <FaCheck className="mr-2 mt-1 text-xs flex-shrink-0" />
                   <span>Monitoring: DataDog, CloudWatch</span>
                 </li>
               </ul>
@@ -126,18 +127,18 @@ const About: React.FC = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-gray-700">
-            <h4 className="text-xl font-semibold text-purple-300 mb-4 flex items-center justify-center">
-              <span className="mr-2">🤖</span> AI & Machine Learning
+            <h4 className="text-xl font-semibold text-gray-300 mb-4 flex items-center justify-center">
+              <FaBrain className="mr-2" /> AI & Machine Learning
             </h4>
             <div className="text-gray-200 text-center space-y-2">
               <p className="text-gray-200">
-                <span className="mr-4">✔ OpenAI GPT-4, ChatGPT API Integration</span>
-                <span className="mr-4">✔ LangChain, Vector Databases</span>
+                <span className="mr-4">OpenAI GPT-4, ChatGPT API Integration</span>
+                <span className="mr-4">LangChain, Vector Databases</span>
               </p>
               <p className="text-gray-200">
-                <span className="mr-4">✔ TensorFlow, PyTorch</span>
-                <span className="mr-4">✔ Hugging Face Transformers</span>
-                <span>✔ RAG Systems</span>
+                <span className="mr-4">TensorFlow, PyTorch</span>
+                <span className="mr-4">Hugging Face Transformers</span>
+                <span>RAG Systems</span>
               </p>
             </div>
           </div>

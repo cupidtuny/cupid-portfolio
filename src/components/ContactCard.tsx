@@ -32,7 +32,7 @@ const ContactCard: React.FC = () => {
               href="https://t.me/cupid040620"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-purple-400 transition-transform hover:scale-110"
+              className="hover:text-gray-300 transition-transform hover:scale-110"
               aria-label="Telegram"
             >
               <FaTelegram size={44} />
@@ -41,7 +41,7 @@ const ContactCard: React.FC = () => {
               href="https://discord.com/users/kevinchen.dev"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-purple-400 transition-transform hover:scale-110"
+              className="hover:text-gray-300 transition-transform hover:scale-110"
               aria-label="Discord"
             >
               <FaDiscord size={44} />

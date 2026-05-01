@@ -4,356 +4,144 @@
 
 :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-     :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
-}
+/* ─── Base ─────────────────────────────────────────────── */
+
+html { scroll-behavior: smooth; }
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-    background-image: url("https://nextui.org/gradient-right-dark.svg");
-    background-position: 1200px;
-    background-repeat: no-repeat;
+    background-color: #0c0c10;
     scroll-behavior: smooth;
 }
 
-/* Smooth scrolling for the entire page */
-html {
-    scroll-behavior: smooth;
-}
+/* ─── Scrollbar ─────────────────────────────────────────── */
 
-.GitHub,
-.LinkedIn {
-    height: 30px;
-}
-
-/* Enhanced Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 10px;
-}
-
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #8b5cf6, #6366f1);
-    border-radius: 10px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
+    background: #3f3f46;
+    border-radius: 8px;
 }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #a78bfa, #818cf8);
-    background-clip: padding-box;
-}
+/* ─── Section / layout helpers ──────────────────────────── */
 
-/* Section Backgrounds */
-.section2 {
-    background-image: url("https://nextui.org/gradient-left-dark.svg");
-    background-position: -400px;
-    background-repeat: no-repeat;
-}
+.hdr {}
+.section2 {}
+.timeline-bg1 {}
+.timeline-bg2 {}
+.pw-bg { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.pw-bg:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.5); }
+.cc-bg {}
+.footer-b { border-top: 1px solid rgba(255,255,255,0.07); }
 
-.hdr {
-    background-image: url("https://nextui.org/gradient-left-dark.svg");
-    background-position: 1100px;
-    background-position-y: -500px;
-    background-repeat: no-repeat;
-}
-
+/* Nav header */
 .mnhdr {
-    border-bottom: #1d1c1c 1px solid;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
     backdrop-filter: blur(20px);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(12, 12, 16, 0.8);
 }
 
+/* Frosted-glass */
 .blur-background {
-    backdrop-filter: blur(20px);
-    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
+/* Card panels */
 .blur-background2 {
-    background-image: url("https://nextui.org/theming-gradient.svg");
-    background-position: 20px;
-    background-position-y: -500px;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    background-color: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.09);
 }
 
-/* Scroll Indicator Animation */
-@keyframes scroll {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+/* ─── Sidebar active state ───────────────────────────────── */
+
+.sidebar-active {
+    background-color: rgba(255,255,255,0.08);
+    color: #ffffff;
 }
 
-.scroll-indicator {
-    animation: scroll 2s ease infinite;
+.sidebar-inactive { color: #6b7280; }
+
+.sidebar-inactive:hover {
+    background-color: rgba(255,255,255,0.04);
+    color: #d1d5db;
 }
 
-/* Custom Gradient */
-.custom-gradient::after {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    background-color: linear-gradient(135deg, #db27ec3d, #5105ca00);
-    clip-path: polygon(0 100%, 100% 100%, 100% 0);
-}
-
-/* Timeline Backgrounds */
-.timeline-bg1 {
-    background-image: url("https://nextui.org/dark-mode-gradient.svg");
-    background-position: 20px;
-    background-position-y: -500px;
-    background-repeat: no-repeat;
-}
-
-.timeline-bg2 {
-    background-image: url("https://nextui.org/stitches-gradient.svg");
-    background-position: -600px;
-    background-position-y: -500px;
-    background-repeat: no-repeat;
-}
-
-/* Previous Work Background */
-.pw-bg {
-    background-image: url("https://nextui.org/gradient-left-dark.svg");
-    background-position: -600px;
-    transition: all 0.3s ease;
-}
-
-.pw-bg:hover {
-    transform: translateY(-5px);
-}
-
-/* Contact Card Background */
-.cc-bg {
-    background-image: url("https://nextui.org/gradient-right-dark.svg");
-    background-position: -400px;
-    background-repeat: repeat;
-    background-size: cover;
-}
-
-/* Footer Background */
-.footer-b {
-    border-top: #1d1c1c 2px solid;
-    background-image: url("https://nextui.org/stitches-gradient.svg");
-    background-position: -320px;
-}
-
-/* Animated Gradient Text */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+/* ─── Text — no more gradient, just white ────────────────── */
 
 .animated-gradient {
-    background: linear-gradient(270deg, #d83cff, #00a3ff, #8b5ef3);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline;
-    animation: gradient 5s ease infinite;
+    color: #ffffff;
 }
 
-/* Profile Image Container */
+/* ─── Scroll indicator ───────────────────────────────────── */
+
+@keyframes scroll {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(12px); }
+}
+.scroll-indicator { animation: scroll 2s ease infinite; }
+
+/* ─── Image utilities ────────────────────────────────────── */
+
+.GitHub, .LinkedIn { height: 30px; }
+
 .profile-image-container {
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .profile-image-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4);
+    transform: scale(1.04);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
-/* Card Hover Effects */
-.card-hover {
-    transition: all 0.3s ease;
-}
-
+.card-hover { transition: all 0.3s ease; }
 .card-hover:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* Button Animations */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
+/* ─── Glass / border ─────────────────────────────────────── */
 
-.animate-bounce {
-    animation: bounce 1s infinite;
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.6s ease-out;
-}
-
-/* Glow Effect */
-.glow-effect {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
-}
-
-.glow-effect:hover {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
-}
-
-/* Pulse Animation */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
-    }
-}
-
-.pulse {
-    animation: pulse 2s infinite;
-}
-
-/* Otherbox Animation */
-.otherbox {
-    justify-content: center;
-    align-items: center;
-    width: 750px;
-    height: 450px;
-    padding: 25px 10px;
-    margin-left: 16px;
-    transform: translateZ(0);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0px 2px 8px -1px #0000001a;
-}
-
-.otherbox::before,
-.otherbox::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-}
-
-/* Conic Gradient Animation */
-.otherbox::before {
-    animation: 6s rotate linear infinite;
-    width: 200%;
-    height: 200%;
-    background: var(--tile-border);
-}
-
-/* Inner Square */
-.otherbox::after {
-    inset: 0;
-    padding: 1px;
-    border-radius: var(--border-radius);
-    background: linear-gradient(
-        to bottom right,
-        rgba(var(--tile-start-rgb), 1),
-        rgba(var(--tile-end-rgb), 1)
-    );
-    background-clip: content-box;
-}
-
-/* Responsive Utilities */
-@media (max-width: 768px) {
-    .animated-gradient {
-        font-size: 2rem;
-    }
-    
-    .profile-image-container {
-        width: 250px;
-        height: 250px;
-    }
-}
-
-/* Glass Morphism Effect */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255,255,255,0.04);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Gradient Border */
 .gradient-border {
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-}
-
-.gradient-border::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #8b5cf6, #6366f1, #ec4899);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: inherit;
-    z-index: -1;
 }
 
-/* Loading Animation */
+.glow-effect { box-shadow: 0 0 20px rgba(255,255,255,0.08); }
+.glow-effect:hover { box-shadow: 0 0 30px rgba(255,255,255,0.14); }
+
+/* ─── Misc animations ────────────────────────────────────── */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.6s ease-out; }
+
 @keyframes shimmer {
-    0% {
-        background-position: -1000px 0;
-    }
-    100% {
-        background-position: 1000px 0;
-    }
+    0%   { background-position: -1000px 0; }
+    100% { background-position:  1000px 0; }
 }
-
 .shimmer {
     animation: shimmer 2s infinite linear;
-    background: linear-gradient(to right, #0f172a 4%, #1e293b 25%, #0f172a 36%);
+    background: linear-gradient(to right, #111116 4%, #1c1c24 25%, #111116 36%);
     background-size: 1000px 100%;
 }
 
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .profile-image-container { width: 250px; height: 250px; }
+}

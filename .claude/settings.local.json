@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del \"d:\\\\2001_08_26\\\\Work\\\\project\\\\cupid_portofolio\\\\src\\\\app\\\\favicon.ico\")"
+    ]
+  }
+}
