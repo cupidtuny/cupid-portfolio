@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaGithub, FaReddit, FaDiscord, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaReddit, FaDiscord, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { scrollToElement } from "./Scroller";
 
@@ -116,6 +116,15 @@ const Sidebar: React.FC = () => {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
+            </Link>
+            <Link
+              href="https://wa.me/85293538727"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-green-400 transition-colors"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp size={18} />
             </Link>
             <Link
               href="https://www.reddit.com/user/Tiny_Calendar_2518/"
