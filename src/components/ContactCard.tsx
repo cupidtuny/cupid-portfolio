@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaGithub, FaLinkedin, FaDiscord, FaTelegram, FaWhatsapp, FaReddit } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -33,15 +33,6 @@ const ContactCard: React.FC = () => {
               <FaLinkedin size={44} />
             </a>
             <a
-              href="https://github.com/kevinchendev1993"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-gray-200 transition-transform hover:scale-110"
-              aria-label="GitHub Profile"
-            >
-              <FaGithub size={44} />
-            </a>
-            <a
               href="https://x.com/KevinChen1209"
               target="_blank"
               rel="noreferrer"
@@ -51,42 +42,6 @@ const ContactCard: React.FC = () => {
               <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
-            </a>
-            <a
-              href="https://wa.me/85293538727"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-green-400 transition-transform hover:scale-110"
-              aria-label="WhatsApp"
-            >
-              <FaWhatsapp size={44} />
-            </a>
-            <a
-              href="https://www.reddit.com/user/Tiny_Calendar_2518/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-orange-500 transition-transform hover:scale-110"
-              aria-label="Reddit"
-            >
-              <FaReddit size={44} />
-            </a>
-            <a
-              href="https://t.me/cupid040620"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-gray-300 transition-transform hover:scale-110"
-              aria-label="Telegram"
-            >
-              <FaTelegram size={44} />
-            </a>
-            <a
-              href="https://discord.com/users/kevinchen.dev"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-gray-300 transition-transform hover:scale-110"
-              aria-label="Discord"
-            >
-              <FaDiscord size={44} />
             </a>
             <a
               href="mailto:kevinchen.dev1993@gmail.com"

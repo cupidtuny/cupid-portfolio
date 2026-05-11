@@ -1,5 +1,5 @@
 import React from "react";
-import { FaDownload, FaFilePdf, FaFileWord, FaLinkedin, FaGithub, FaDiscord, FaTelegram } from "react-icons/fa";
+import { FaDownload, FaFilePdf, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const Resume: React.FC = () => {
@@ -86,19 +86,37 @@ const Resume: React.FC = () => {
                 </div>
               </a>
 
-              {/* GitHub */}
+              {/* LinkedIn */}
               <a
-                href="https://github.com/kevinchendev1993"
+                href="https://www.linkedin.com/in/kevin-chen-3b479212/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-purple-900/30 rounded-lg hover:bg-purple-800/50 transition-all duration-300 group"
               >
-                <div className="bg-gray-800 p-3 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                  <FaGithub className="text-2xl text-white" />
+                <div className="bg-blue-700 p-3 rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                  <FaLinkedin className="text-2xl text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">GitHub</p>
-                  <p className="text-gray-300 text-sm">@kevinchen</p>
+                  <p className="text-white font-semibold">LinkedIn</p>
+                  <p className="text-gray-300 text-sm">kevin-chen-3b479212</p>
+                </div>
+              </a>
+
+              {/* X */}
+              <a
+                href="https://x.com/KevinChen1209"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center p-4 bg-purple-900/30 rounded-lg hover:bg-purple-800/50 transition-all duration-300 group"
+              >
+                <div className="bg-gray-900 p-3 rounded-lg mr-4 group-hover:scale-110 transition-transform">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white font-semibold">X (Twitter)</p>
+                  <p className="text-gray-300 text-sm">@KevinChen1209</p>
                 </div>
               </a>
 

@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { FaGithub, FaHeart, FaReddit, FaLinkedin } from "react-icons/fa";
+import { FaHeart, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import { ButtonLink } from "./Scroller";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -22,19 +23,16 @@ const Footer: React.FC = () => {
             </div>
             <p className="text-gray-400 mb-4">{f.tagline}</p>
             <div className="flex space-x-4">
-              <Link href="https://github.com/kevinchendev1993" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
-                <FaGithub size={24} />
+              <Link href="https://www.linkedin.com/in/kevin-chen-3b479212/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+                <FaLinkedin size={24} />
               </Link>
               <Link href="https://x.com/KevinChen1209" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="X">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </Link>
-              <Link href="https://www.reddit.com/user/Tiny_Calendar_2518/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Reddit">
-                <FaReddit size={24} />
-              </Link>
-              <Link href="https://www.linkedin.com/in/kevin-chen-3b479212/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
-                <FaLinkedin size={24} />
+              <Link href="mailto:kevinchen.dev1993@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+                <SiGmail size={24} />
               </Link>
             </div>
           </div>

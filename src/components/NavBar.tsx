@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ButtonLink } from "./Scroller";
-import { FaDiscord, FaTelegram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 const Navbar: React.FC = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -81,28 +81,22 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
           <Link
-            href="https://github.com/kevinchendev1993"
+            href="https://www.linkedin.com/in/kevin-chen-3b479212/"
             target="_blank"
-            className="hidden md:flex"
-            aria-label="GitHub"
+            className="hidden md:flex items-center hover:text-blue-400 transition-colors"
+            aria-label="LinkedIn"
           >
-            <img src="/github-mark-white.svg" alt="" className="GitHub" />
+            <FaLinkedin size={30} />
           </Link>
           <Link
-            href="https://t.me/kevinchen"
+            href="https://x.com/KevinChen1209"
             target="_blank"
             className="hidden md:flex items-center hover:text-purple-400 transition-colors"
-            aria-label="Telegram"
+            aria-label="X"
           >
-            <FaTelegram size={30} />
-          </Link>
-          <Link
-            href="https://discord.com/users/kevinchen"
-            target="_blank"
-            className="hidden md:flex items-center hover:text-purple-400 transition-colors"
-            aria-label="Discord"
-          >
-            <FaDiscord size={30} />
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
           </Link>
           <Link
             href="mailto:kevinchen.dev1993@gmail.com"
@@ -147,16 +141,15 @@ const Navbar: React.FC = () => {
           />
         </div>
         <div className="flex items-center mt-20 mr-4 space-x-4">
-          <Link href="https://github.com/kevinchen" target="_blank" aria-label="GitHub">
-            <img src="/github-mark-white.svg" alt="" className="GitHub" />
+          <Link href="https://www.linkedin.com/in/kevin-chen-3b479212/" target="_blank" aria-label="LinkedIn" className="hover:text-blue-400 transition-colors">
+            <FaLinkedin size={30} />
           </Link>
-          <Link href="https://t.me/kevinchen" target="_blank" aria-label="Telegram">
-            <FaTelegram size={30} />
+          <Link href="https://x.com/KevinChen1209" target="_blank" aria-label="X" className="hover:text-purple-400 transition-colors">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
           </Link>
-          <Link href="https://discord.com/users/kevinchen" target="_blank" aria-label="Discord">
-            <FaDiscord size={30} />
-          </Link>
-          <Link href="mailto:kevinchen.dev1993@gmail.com" target="_blank" aria-label="Email">
+          <Link href="mailto:kevinchen.dev1993@gmail.com" target="_blank" aria-label="Email" className="hover:text-purple-400 transition-colors">
             <SiGmail size={30} />
           </Link>
         </div>
