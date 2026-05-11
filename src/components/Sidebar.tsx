@@ -5,19 +5,21 @@ import Link from "next/link";
 import { FaGithub, FaReddit, FaDiscord, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { scrollToElement } from "./Scroller";
-
-const sections = [
-  { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "education", label: "Education" },
-  { id: "previouswork", label: "Projects" },
-  { id: "contact", label: "Contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 const Sidebar: React.FC = () => {
+  const { t, toggleLang } = useLanguage();
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const sections = [
+    { id: "hero", label: t.nav.home },
+    { id: "about", label: t.nav.about },
+    { id: "experience", label: t.nav.experience },
+    { id: "education", label: t.nav.education },
+    { id: "previouswork", label: t.nav.projects },
+    { id: "contact", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +34,8 @@ const Sidebar: React.FC = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t]);
 
   const handleNav = (id: string) => {
     scrollToElement(id);
@@ -84,7 +87,6 @@ const Sidebar: React.FC = () => {
               className={`relative flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 text-left w-full
                 ${activeSection === id ? "sidebar-active" : "sidebar-inactive"}`}
             >
-              {/* Active indicator bar */}
               <span
                 className={`absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 rounded-r-full transition-all duration-300
                   ${activeSection === id ? "bg-white opacity-100" : "opacity-0"}`}
@@ -94,8 +96,18 @@ const Sidebar: React.FC = () => {
           ))}
         </nav>
 
+        {/* Language toggle */}
+        <div className="mt-4">
+          <button
+            onClick={toggleLang}
+            className="w-full text-xs font-semibold px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all duration-200"
+          >
+            {t.nav.langToggle}
+          </button>
+        </div>
+
         {/* Social icons */}
-        <div className="mt-8 pt-6 border-t border-gray-800/60">
+        <div className="mt-4 pt-6 border-t border-gray-800/60">
           <div className="flex flex-wrap gap-3">
             <Link
               href="https://github.com/kevinchendev1993"

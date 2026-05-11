@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import Providers from "@/components/Providers";
 
 // export const metadata = {
 //   title: "iNoah",
@@ -33,7 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-5K5MNE4T7X"
         strategy="afterInteractive"

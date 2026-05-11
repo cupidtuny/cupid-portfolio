@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import { ButtonLink } from "./Scroller";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <div id="hero" className="relative h-screen flex items-center justify-center">
       <div className="text-center text-white px-6 md:px-12">
@@ -9,19 +14,19 @@ const Hero: React.FC = () => {
           <span className="animated-gradient">Kevin Chen</span> 👋
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300">
-          Senior Full-Stack Developer & Technology Consultant
+          {t.hero.subtitle}
           <br />
-          Specializing in scalable web applications, cloud architecture, and AI-powered solutions
+          {t.hero.subtitleLine2}
         </p>
         <div className="flex justify-center space-x-4 flex-wrap gap-2">
           <ButtonLink
             className="bg-white text-black font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 transition-all shadow-lg"
-            buttonText="View My Work"
+            buttonText={t.hero.viewMyWork}
             elementId="previouswork"
           />
           <ButtonLink
             className="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-black transition-all"
-            buttonText="Contact Me"
+            buttonText={t.hero.contactMe}
             elementId="contact"
           />
         </div>
