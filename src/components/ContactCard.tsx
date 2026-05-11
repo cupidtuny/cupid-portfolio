@@ -32,17 +32,7 @@ const ContactCard: React.FC = () => {
             >
               <FaLinkedin size={44} />
             </a>
-            <a
-              href="https://x.com/KevinChen1209"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-gray-200 transition-transform hover:scale-110"
-              aria-label="X"
-            >
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
+
             <a
               href="mailto:kevinchen.dev1993@gmail.com"
               target="_blank"

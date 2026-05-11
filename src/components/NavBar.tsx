@@ -88,16 +88,7 @@ const Navbar: React.FC = () => {
           >
             <FaLinkedin size={30} />
           </Link>
-          <Link
-            href="https://x.com/KevinChen1209"
-            target="_blank"
-            className="hidden md:flex items-center hover:text-purple-400 transition-colors"
-            aria-label="X"
-          >
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-            </svg>
-          </Link>
+
           <Link
             href="mailto:kevinchen.dev1993@gmail.com"
             target="_blank"
@@ -144,11 +135,7 @@ const Navbar: React.FC = () => {
           <Link href="https://www.linkedin.com/in/kevin-chen-3b479212/" target="_blank" aria-label="LinkedIn" className="hover:text-blue-400 transition-colors">
             <FaLinkedin size={30} />
           </Link>
-          <Link href="https://x.com/KevinChen1209" target="_blank" aria-label="X" className="hover:text-purple-400 transition-colors">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.579 2.25H9.08l4.265 5.636L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-            </svg>
-          </Link>
+
           <Link href="mailto:kevinchen.dev1993@gmail.com" target="_blank" aria-label="Email" className="hover:text-purple-400 transition-colors">
             <SiGmail size={30} />
           </Link>
